@@ -26,7 +26,6 @@ require('lazy').setup({
   { import = 'plugins.completion' },
   { import = 'plugins.languages' },
   { import = 'plugins.utils' },
-  { import = 'plugins.db' },
 }, opts)
 
 require 'mappings'
