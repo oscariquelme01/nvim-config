@@ -26,7 +26,20 @@ require('lazy').setup({
   { import = 'plugins.completion' },
   { import = 'plugins.languages' },
   { import = 'plugins.utils' },
+  { import = 'plugins.lsp.plugins' }
 }, opts)
 
 require 'mappings'
 require 'options'
+
+-- Require the main lsp file
+require 'plugins.lsp'
+
+-- Then load all other LSP configs
+local lsp_path = vim.fn.stdpath("config") .. "/lua/plugins/lsp"
+for _, file in ipairs(vim.fn.readdir(lsp_path)) do
+  if file:match("%.lua$") and file ~= "init.lua" then
+    local module_name = "plugins.lsp." .. file:gsub("%.lua$", "")
+    require(module_name)
+  end
+end
