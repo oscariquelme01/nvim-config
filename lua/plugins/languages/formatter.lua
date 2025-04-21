@@ -31,6 +31,9 @@ return {
         },
         nix = {
           require("formatter.filetypes.nix").nixfmt
+        },
+        css = {
+          require("formatter.filetypes.css").prettier
         }
       }
     }

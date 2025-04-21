@@ -8,6 +8,7 @@ function install_servers(on_attach, capabilities)
       },
     },
     ts_ls = { implicitProjectConfiguration = { checkJs = true } },
+    nil_ls = {}
   }
 
   -- Ensure the servers above are installed
