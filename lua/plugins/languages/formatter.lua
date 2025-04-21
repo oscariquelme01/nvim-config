@@ -28,6 +28,12 @@ return {
         },
         typescriptreact = {
           require("formatter.filetypes.typescriptreact").prettier
+        },
+        nix = {
+          require("formatter.filetypes.nix").nixfmt
+        },
+        css = {
+          require("formatter.filetypes.css").prettier
         }
       }
     }
