@@ -31,3 +31,4 @@ require('lazy').setup({
 
 require 'mappings'
 require 'options'
+require 'lsp'
