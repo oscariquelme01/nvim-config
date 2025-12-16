@@ -44,7 +44,7 @@ return {
         },
       },
     }
-    vim.o.termguicolors = true -- Use terminal gui colors
+    vim.opt.termguicolors = true -- Use terminal gui colors
     vim.cmd.colorscheme 'catppuccin-frappe'
   end,
 }
