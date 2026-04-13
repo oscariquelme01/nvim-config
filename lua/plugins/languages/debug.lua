@@ -22,7 +22,7 @@ return {
     -- Basic debugging keymaps
     keymap('n', '<leader>n', dap.continue, { desc = 'Debug: Start/Continue' })
     keymap('n', '<leader>i', dap.step_into, { desc = 'Debug: Step Into' })
-    keymap('n', '<leader>o', dap.step_over, { desc = 'Debug: Step Over' })
+    -- keymap('n', '<leader>o', dap.step_over, { desc = 'Debug: Step Over' }) -- conflicts with oil.nvim
     keymap('n', '<leader>b', dap.toggle_breakpoint, { desc = 'Debug: Toggle Breakpoint' })
     keymap('n', '<leader>B', function()
       dap.set_breakpoint(vim.fn.input 'Breakpoint condition: ')

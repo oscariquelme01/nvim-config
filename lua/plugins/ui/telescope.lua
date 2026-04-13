@@ -17,6 +17,8 @@ return {
 
     keymap('n', '<leader>fv', require('telescope.builtin').git_status, { desc = 'Search modified files' })
     keymap('n', '<leader>ff', require('telescope.builtin').find_files, { desc = 'Search files' })
+    keymap('n', '<leader>fu', require('telescope.builtin').lsp_references, { desc = 'Search references' })
+    keymap('n', '<leader>fp', require('telescope.builtin').pickers, { desc = 'Search telescope pickers' })
     keymap('n', '<leader>fh', require('telescope.builtin').help_tags, { desc = 'Search help' })
     keymap('n', '<leader>fg', require('telescope.builtin').live_grep, { desc = 'Search by grep' })
     keymap('n', '<leader>fd', require('telescope.builtin').diagnostics, { desc = 'Search diagnostics' })
@@ -35,6 +37,7 @@ return {
 
     require('telescope').setup {
       defaults = {
+        cache_picker = { num_pickers = -1 },
         layout_strategy = 'flex',
         layout_config = { prompt_position = 'top' },
         file_ignore_patterns = { "node_modules" },
