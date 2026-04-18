@@ -19,11 +19,9 @@ return {
 		    keymaps = {
 		      ["g?"] = { "actions.show_help", mode = "n" },
 		      ["<CR>"] = "actions.select",
-		      ["<C-s>"] = { "actions.select", opts = { vertical = true } },
+		      ["<C-v>"] = { "actions.select", opts = { vertical = true } },
 		      ["<C-x>"] = { "actions.select", opts = { horizontal = true } },
 		      ["<C-t>"] = { "actions.select", opts = { tab = true } },
-		      ["<C-p>"] = "actions.preview",
-		      ["<C-c>"] = { "actions.close", mode = "n" },
 		      ["<C-r>"] = "actions.refresh",
 		      ["-"] = { "actions.parent", mode = "n" },
 		      ["_"] = { "actions.open_cwd", mode = "n" },

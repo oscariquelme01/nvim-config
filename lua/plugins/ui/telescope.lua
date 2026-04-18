@@ -1,6 +1,5 @@
 return {
   'nvim-telescope/telescope.nvim',
-  branch = '0.1.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
     {
@@ -41,12 +40,6 @@ return {
         layout_strategy = 'flex',
         layout_config = { prompt_position = 'top' },
         file_ignore_patterns = { "node_modules" },
-        mappings = {
-          i = {
-            ['<C-j>'] = require('telescope.actions').move_selection_next,
-            ['<C-k>'] = require('telescope.actions').move_selection_previous,
-          },
-        },
       },
       pickers = {
         find_files = {
