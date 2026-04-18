@@ -7,9 +7,9 @@ return {
   config = function()
     require("Navigator").setup({ disable_on_zoom = true })
 
-    keymap("n", "<C-h>", "<cmd>NavigatorLeft<CR>", { noremap = true, silent = true })
-    keymap("n", "<C-j>", "<cmd>NavigatorDown<CR>", { noremap = true, silent = true })
-    keymap("n", "<C-k>", "<cmd>NavigatorUp<CR>", { noremap = true, silent = true })
-    keymap("n", "<C-l>", "<cmd>NavigatorRight<CR>", { noremap = true, silent = true })
+    keymap("n", "<D-h>", "<cmd>NavigatorLeft<CR>", { noremap = true, silent = true })
+    keymap("n", "<D-j>", "<cmd>NavigatorDown<CR>", { noremap = true, silent = true })
+    keymap("n", "<D-k>", "<cmd>NavigatorUp<CR>", { noremap = true, silent = true })
+    keymap("n", "<D-l>", "<cmd>NavigatorRight<CR>", { noremap = true, silent = true })
   end,
 }

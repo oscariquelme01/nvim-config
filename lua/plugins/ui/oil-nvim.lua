@@ -10,6 +10,12 @@ return {
 	lazy = false,
 	config = function()
 		require("oil").setup({
+		    view_options = {
+		      show_hidden = true,
+		    },
+		    win_options = {
+		      winbar = "%!v:lua.require('oil').get_current_dir()",
+		    },
 		    keymaps = {
 		      ["g?"] = { "actions.show_help", mode = "n" },
 		      ["<CR>"] = "actions.select",
