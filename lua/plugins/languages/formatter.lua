@@ -28,6 +28,9 @@ return {
         },
         typescriptreact = {
           require("formatter.filetypes.typescriptreact").prettier
+        },
+        sql ={
+          require("formatter.filetypes.sql").pgformat
         }
       }
     }
