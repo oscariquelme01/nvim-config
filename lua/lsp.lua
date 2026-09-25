@@ -176,6 +176,8 @@ vim.lsp.enable("lua_ls")
 vim.lsp.enable("bashls")
 -- Web dev
 vim.lsp.enable({ "ts_ls", "cssls", "tailwindcssls", "htmlls", "vue_ls" })
+-- c++
+vim.lsp.enable("clangd")
 
 -- Start, Stop, Restart, Log commands {{{
 vim.api.nvim_create_user_command("LspStart", function()

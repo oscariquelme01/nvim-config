@@ -19,9 +19,9 @@ return {
 		    keymaps = {
 		      ["g?"] = { "actions.show_help", mode = "n" },
 		      ["<CR>"] = "actions.select",
-		      ["<C-v>"] = { "actions.select", opts = { vertical = true } },
-		      ["<C-x>"] = { "actions.select", opts = { horizontal = true } },
-		      ["<C-t>"] = { "actions.select", opts = { tab = true } },
+		      -- ["<C-v>"] = { "actions.select", opts = { vertical = true } },
+		      -- ["<C-x>"] = { "actions.select", opts = { horizontal = true } },
+		      -- ["<C-t>"] = { "actions.select", opts = { tab = true } },
 		      ["<C-r>"] = "actions.refresh",
 		      ["-"] = { "actions.parent", mode = "n" },
 		      ["_"] = { "actions.open_cwd", mode = "n" },
@@ -34,6 +34,14 @@ return {
 		    },
 		  use_default_keymaps = false,
 	      })
+
+			-- automatic preview
+			vim.api.nvim_create_autocmd("CursorMoved", {
+				pattern = "oil://*",
+				callback = function()
+					require("oil.actions").preview.callback()
+				end,
+			})
 
 			vim.keymap.set("n", "<leader>o", function()
 				require("oil").open()
