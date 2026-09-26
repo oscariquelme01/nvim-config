@@ -16,7 +16,7 @@ return {
 
 		vim.cmd.colorscheme("vesper")
 
-		-- Syntax highlights for the 
+		-- Syntax highlights for the tabline
 		vim.api.nvim_set_hl(0, "TabLineFill", {
 			bg = "#101010",
 		})
@@ -28,7 +28,7 @@ return {
 
 		vim.api.nvim_set_hl(0, "TabLineSel", {
 			fg = "#FFC799",
-			bg = "#232323",
+			bg = "#101010",
 			bold = true,
 		})
 	end,
