@@ -1,0 +1,17 @@
+Let's see, what do we want out of our system?
+- LSP for sure -> 0 non sense configuration! (completion, diagnostics, )
+- QOL improvements (comments, surrounding with quotes...)
+- Telescope for the win! there might be something out there better but telescope is good enough. Need to decide how to do search & replace project wide.
+- Support typescript/javascript + react and vue, lua, python, html, css, tailwind, SQL, markdown, bash and latex. I can also configure rust, c/c++ and go for a future in systems engineering but that's not an absolute requirement right now
+- Great git integration in terms of feedback, not usage, that's a lazygit concern
+- Treesitter + context
+- 0 Nonsense status bar if anything
+- Seeing open buffer's and tabs
+- Minimalist feel + vesper themes with additional colors
+- 0 nonsense Formatting + adding formatters easily (Conform.nvim?)
+- Good use of marks (marks.nvim?)
+- Modern UI concerns
+- Blazingly fast at startup!!
+- 0 nonsense file management (oil or nvim tree, not both!!!)
+- Keybind discovery!! (whichkey)
+- FOLDS!! Folds should work and I should have the keybinds memorize to quickly inspect a file.
