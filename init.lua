@@ -23,7 +23,7 @@ local opts = {}
 require('lazy').setup({
   { import = 'plugins.ui' },
   -- { import = 'plugins.editor' },
-  -- { import = 'plugins.navigation' },
+  { import = 'plugins.navigation' },
   -- { import = 'plugins.languages' },
   -- { import = 'plugins.integrations' }
 }, opts)
@@ -32,4 +32,5 @@ require 'config.mappings'
 require 'config.options'
 require 'config.lsp'
 require 'config.filetypes'
+require 'config.statusline'
 

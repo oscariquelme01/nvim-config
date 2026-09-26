@@ -1,3 +1,48 @@
+local function set_highlights()
+  local colors = {
+    StGitBranch = "#d3c6aa",
+    StGitAdd = "#a7c080",
+    StGitChange = "#dbbc7f",
+    StGitDelete = "#e67e81",
+    FileModifiedIcon = "#83a598",
+    ErrorHl = "#e67e81",
+    WarningHl = "#dbbc7f",
+    HintsHl = "#A5E9DD",
+    InfoHl = "#B0BA99",
+    RecordingHl = "#e67e81",
+    LazyCheckHl = "#F7F1DE",
+  }
+
+  for group, color in pairs(colors) do
+    vim.api.nvim_set_hl(0, group, { fg = color, bg = "NONE" })
+  end
+
+  local modes = {
+    StModeNormal = "#83a598",
+    StModeInsert = "#d5c4a1",
+    StModeVisual = "#d699b6",
+    StModeOther = "#e67e81",
+  }
+
+  for group, color in pairs(modes) do
+    vim.api.nvim_set_hl(0, group, {
+      fg = "#2d353b",
+      bg = color,
+      bold = true,
+    })
+  end
+
+  vim.api.nvim_set_hl(0, "StBase", { fg = "#d3c6aa", bg = "NONE" })
+end
+
+set_highlights()
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = set_highlights,
+})
+
+vim.opt.laststatus = 3
+vim.opt.showmode = false
+
 local function get_lazy_updates()
 	local lazy_status = require("lazy.status")
 	local has_updates = lazy_status.has_updates()
