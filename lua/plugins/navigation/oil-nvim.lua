@@ -1,8 +1,9 @@
 return {
   "stevearc/oil.nvim",
   lazy = false,
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-
+  dependencies = {
+		{ "nvim-mini/mini.icons", opts = {} }
+	},
   keys = {
     {
       "<leader>o",
@@ -22,7 +23,7 @@ return {
     },
 
     win_options = {
-      winbar = "%!v:lua.require('oil').get_current_dir() or ''",
+      winbar = "%!v:lua.require('oil').get_current_dir()",
     },
 
     use_default_keymaps = false,

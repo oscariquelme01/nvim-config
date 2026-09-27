@@ -1,7 +1,7 @@
 return {
   "ibhagwan/fzf-lua",
   dependencies = {
-    "nvim-tree/nvim-web-devicons",
+    "nvim-mini/mini.icons",
   },
 
   config = function()
@@ -9,24 +9,17 @@ return {
     local keymap = vim.keymap.set
 
     fzf.setup({
-      "borderless",
+      "borderless-full",
 
-      -- Make it inherit Vesper/Neovim instead of fzf-lua's more colorful defaults.
-      hls = {
-        normal = "Normal",
-        preview_normal = "Normal",
-
-        border = "FloatBorder",
-        preview_border = "FloatBorder",
-
-        cursorline = "CursorLine",
-        cursorlinenr = "CursorLineNr",
-
-        title = "Normal",
-        preview_title = "Normal",
-
-        search = "IncSearch",
-      },
+			-- Splits inside every picker shortcuts
+			actions = {
+				files = {
+					true, -- Keep the other default actions
+					["ctrl-s"] = fzf.actions.file_vsplit,
+					["ctrl-x"] = fzf.actions.file_split,
+					["ctrl-v"] = false -- remove the old ctrl+v mapping
+				}
+			},
 
       winopts = {
         backdrop = 100,
