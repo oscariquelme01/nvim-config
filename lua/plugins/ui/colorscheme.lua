@@ -31,5 +31,8 @@ return {
 			bg = "#101010",
 			bold = true,
 		})
+
+		-- fzf.lua background
+		vim.api.nvim_set_hl(0, "PMenuSBar", { bg = "#101010" })
 	end,
 }
