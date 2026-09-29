@@ -13,7 +13,6 @@ return {
       ensure_installed = {
         -- Formatters
         "clang-format",
-        "goimports",
         "prettierd",
         "shfmt",
         "stylua",

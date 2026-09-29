@@ -33,7 +33,6 @@ return {
 				rust = { "rustfmt", lsp_format = "fallback" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
-				go = { "goimports", "gofmt" },
 			},
 			format_on_save = {
 				timeout_ms = 1000,
