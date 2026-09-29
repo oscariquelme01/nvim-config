@@ -13,17 +13,31 @@ return {
     },
     opts = {
       ensure_installed = {
+        -- Neovim / Lua
         "lua_ls",
+
+        -- Web / frontend
         "ts_ls",
         "vue_ls",
         "html",
         "cssls",
         "tailwindcss",
+
+        -- Scripting / backend
         "pyright",
         "bashls",
+
+        -- Documents / data
         "marksman",
         "sqlls",
         "texlab",
+
+        -- Systems languages from the old config
+        "clangd",
+
+        -- Future systems-language options:
+        -- "rust_analyzer",
+        -- "gopls",
       },
     },
   },
