@@ -25,8 +25,6 @@ return {
         markdown = { "markdownlint-cli2" },
         mdx = { "markdownlint-cli2" },
         sql = { "sqlfluff" },
-        tex = { "chktex" },
-        plaintex = { "chktex" },
       }
 
       vim.api.nvim_create_autocmd({ "BufReadPost", "BufWritePost", "InsertLeave" }, {

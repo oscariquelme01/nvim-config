@@ -20,7 +20,6 @@ return {
         "tex-fmt",
 
         -- Linters
-        "chktex",
         "eslint_d",
         "htmlhint",
         "markdownlint-cli2",
