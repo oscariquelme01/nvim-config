@@ -12,11 +12,23 @@ return {
     opts = {
       ensure_installed = {
         -- Formatters
-        "stylua",
+        "clang-format",
+        "goimports",
         "prettierd",
+        "shfmt",
+        "stylua",
+        "tex-fmt",
 
         -- Linters
+        "chktex",
+        "eslint_d",
+        "htmlhint",
+        "markdownlint-cli2",
+        "ruff",
+        "selene",
         "shellcheck",
+        "sqlfluff",
+        "stylelint",
 
         -- TODO: curate this list!
       },
