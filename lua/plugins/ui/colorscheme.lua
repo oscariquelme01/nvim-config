@@ -34,5 +34,9 @@ return {
 
 		-- fzf.lua background
 		vim.api.nvim_set_hl(0, "PMenuSBar", { bg = "#101010" })
+
+		-- blink.indent colors
+		vim.api.nvim_set_hl(0, "BlinkIndent", { fg = '#405A50' })
+		vim.api.nvim_set_hl(0, "BlinkIndentScope", { fg = '#A89870' })
 	end,
 }

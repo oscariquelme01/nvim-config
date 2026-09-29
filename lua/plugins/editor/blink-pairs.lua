@@ -41,7 +41,6 @@ return {
       -- set to { 'BlinkPairs' } to disable rainbow highlighting
       groups = { 'BlinkPairsOrange', 'BlinkPairsPurple', 'BlinkPairsBlue' },
       -- pairs whose nesting is counted separately from the rest, or `true` for every pair
-      separate = { '<' },
       unmatched_group = 'BlinkPairsUnmatched',
 
       -- highlights matching pairs under the cursor
