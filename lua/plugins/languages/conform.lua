@@ -1,6 +1,7 @@
 return {
 	"stevearc/conform.nvim",
-	cmd = "ConformInfo",
+	cmd = { "ConformInfo", "Format" },
+	event = "BufWritePre",
 
 	config = function()
 		require("conform").setup({
@@ -41,5 +42,9 @@ return {
 		})
 
 		vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+
+		vim.api.nvim_create_user_command("Format", function()
+			require("conform").format({ async = true, lsp_format = "fallback" })
+		end, { desc = "Format buffer" })
 	end,
 }
