@@ -1,5 +1,4 @@
 -- This file is meant to keep the keymaps for a better default neovim experience, each plugin's mappings should be set in its corresponding file
-
 local keymap = vim.keymap.set
 
 ------- VISUAL MODE -------
@@ -33,8 +32,6 @@ keymap("n", "<A-k>", ":m .-2<CR>==", {noremap = true, silent = true, desc = "mov
 keymap("n", "mm", ":foldopen<CR>", {noremap = true, silent = true, desc = "open fold"})
 keymap("n", "mn", ":foldclose<CR>", {noremap = true, silent = true, desc = "close fold"})
 -- Diagnostics
-keymap('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-keymap('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 keymap('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 -- Tab navigation
