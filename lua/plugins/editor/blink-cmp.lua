@@ -30,7 +30,31 @@ return {
     appearance = {
       -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
       -- Adjusts spacing to ensure icons are aligned
-      nerd_font_variant = 'normal'
+      nerd_font_variant = 'normal',
+      kind_icons = {
+        Class = "",
+        Color = "",
+        Constant = "",
+        Constructor = "",
+        Enum = "",
+        EnumMember = "",
+        Event = "",
+        Field = "",
+        File = "",
+        Folder = "",
+        Function = "󰊕",
+        Interface = "",
+        Keyword = "",
+        Method = "ƒ",
+        Module = "󰏗",
+        Property = "",
+        Snippet = "",
+        Struct = "",
+        Text = "",
+        Unit = "",
+        Value = "",
+        Variable = "",
+      },
     },
 
     -- (Default) Only show the documentation popup when manually triggered
@@ -50,12 +74,13 @@ return {
   },
   opts_extend = { "sources.default" },
 
-  config = function (_, opts)
-    require("blink.cmp").setup(opts)
-    
+  config = function(_, opts)
+    local blink = require("blink.cmp")
+    blink.setup(opts)
+
     -- declare LSP capabilities
     vim.lsp.config("*", {
-      capabilities = require("blink.cmp").get_lsp_capabilities(),
+      capabilities = blink.get_lsp_capabilities(),
     })
   end
 }
