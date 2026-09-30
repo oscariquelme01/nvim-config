@@ -22,3 +22,10 @@ local config = {
   },
 }
 vim.diagnostic.config(config)
+
+-- LspInfo cause I am so used to it
+vim.api.nvim_create_user_command("LspInfo", function()
+  vim.cmd("silent checkhealth vim.lsp")
+end, {
+  desc = "Get all the information about all LSP attached",
+})
