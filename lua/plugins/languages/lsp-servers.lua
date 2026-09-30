@@ -10,7 +10,6 @@ return {
       "mason-org/mason.nvim",
       "neovim/nvim-lspconfig",
       "saghen/blink.cmp",
-      "yioneko/nvim-vtsls",
     },
     opts = {
       automatic_enable = {

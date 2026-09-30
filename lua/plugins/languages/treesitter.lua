@@ -44,6 +44,12 @@ return {
           clear = true,
         }),
         callback = function(args)
+          -- VimTeX owns syntax highlighting and indentation for TeX buffers.
+          -- Keep the LaTeX parser installed for injections such as Markdown math.
+          if args.match == 'tex' or args.match == 'plaintex' then
+            return
+          end
+
           -- Skip buffers without an installed parser.
           local started = pcall(vim.treesitter.start, args.buf)
           if not started then
