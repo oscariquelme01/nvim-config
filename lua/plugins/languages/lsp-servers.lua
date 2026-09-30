@@ -10,14 +10,21 @@ return {
       "mason-org/mason.nvim",
       "neovim/nvim-lspconfig",
       "saghen/blink.cmp",
+      "yioneko/nvim-vtsls",
     },
     opts = {
+      automatic_enable = {
+        -- Prefer vtsls for TypeScript/JavaScript and Vue integration in this config.
+        -- Removing ts_ls from ensure_installed does not disable an already-installed
+        -- server: exclude it explicitly to avoid two TypeScript clients attaching.
+        exclude = { "ts_ls" },
+      },
       ensure_installed = {
         -- Neovim / Lua
         "lua_ls",
 
         -- Web / frontend
-        "ts_ls",
+        "vtsls",
         "vue_ls",
         "html",
         "cssls",
