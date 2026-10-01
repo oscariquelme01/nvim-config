@@ -29,6 +29,7 @@ require("lazy").setup({
 	{ import = "plugins.integrations.git" },
 	{ import = "plugins.integrations.opencode" },
 	{ import = "plugins.integrations.kitty" },
+	{ import = "plugins.integrations.databases" }
 }, opts)
 
 require("config.mappings")
